@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Date;
 
 import metier.Ecole;
 import metier.Etudiant;
@@ -155,12 +156,19 @@ public class ServiceGestionEnsup {
 
 			// etape5 parcours du resultSet
 			while (rs.next()) {
-				System.out.println(rs.getInt("idEcole"));
+				System.out.println(rs.getInt("idEtudiant"));
 				System.out.println(" ");
-				System.out.print(rs.getString("nom"));
+				System.out.print(rs.getString("nomEtudiant"));
 				System.out.print(" ");
-				System.out.println(rs.getString("prenom"));
-
+				System.out.println(rs.getString("prenomEtudiant"));
+				System.out.print(" ");
+				System.out.println(rs.getString("emailEtudiant"));
+				System.out.print(" ");
+				System.out.println(rs.getString("adresseEtudiant"));
+				System.out.print(" ");
+				System.out.println(rs.getString("telephoneEtudiant"));
+				System.out.print(" ");
+				System.out.println(rs.getString("dateNaissanceEtudiant"));
 			}
 
 		} catch (SQLException e) {
@@ -356,9 +364,10 @@ public class ServiceGestionEnsup {
 
 				// etape 3 creation du statement
 				st = cn.createStatement();
-				String sql = "INSERT INTO `etudiant` (`nomEtudiant`, `prenomEtudiant`,`emailEtudiant`, `adresseEtudaint`,`telephoneEtudiant`, `dateNaissanceEtudiant`) "
+				String sql = "INSERT INTO `etudiant` (`nomEtudiant`, `prenomEtudiant`,`emailEtudiant`, "
+						+ "`adresseEtudiant`,`telephoneEtudiant`) "
 						+ "VALUES ('" + etudiant.getNomEtudiant() + "','"+ etudiant.getPrenomEtudiant() + "', '"
-						+ etudiant.getEmailEtudiant()+"', '"+etudiant.getAdresseEtudiant()+"', '"+etudiant.getTelephoneEtudiant() +"', '"+etudiant.getDateNaissanceEtudiant()+"')";
+						+ etudiant.getEmailEtudiant()+"', '"+etudiant.getAdresseEtudiant()+"', '"+etudiant.getTelephoneEtudiant() +"')";
 
 				// etape 4 executer la requette
 				st.executeUpdate(sql);
@@ -382,4 +391,6 @@ public class ServiceGestionEnsup {
 				}
 			}
 		}
+		
+
 }

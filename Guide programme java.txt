@@ -1,0 +1,10 @@
+﻿
+GUIDE
+
+1- Installez ou ouvrez MYSQL puis exécuter ces requêtes.
+
+2- Ouvrir le fichier lunch.bat avec un éditeur de texte
+	* changer le chemin du jdk  cd "C:\Program Files\Java\jdk1.8.0_162\bin" 
+	* changer le dossier du jar "C:\Users\zeuhias\eclipse-workspace\EtudiantEcole-master\EtudiantEcole.jar"
+
+3- Lancer le fichier lunch.bat

@@ -231,9 +231,14 @@ public class Lanceur {
 		case 5:
 			break;
 		case 6:
+			// lister les étudiants
+			System.out.println();
+			System.out.println("La liste des étudiants");
+			ServiceGestionEnsup.lireEtudiant();
+			
 			break;
 		default:
 			break;
 		}
 	}
-	}
+}
