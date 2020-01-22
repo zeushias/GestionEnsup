@@ -235,7 +235,7 @@ public class Lanceur {
 			System.out.println();
 			System.out.println("La liste des étudiants");
 			ServiceGestionEnsup.lireEtudiant();
-			
+
 			break;
 		default:
 			break;
